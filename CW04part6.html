@@ -1,0 +1,72 @@
+<!-- question 6 -->
+<br>
+<br>
+<html>   
+<head> 
+    <title>divide array into evens and odds</title> 
+</head> 
+<body> 
+	<script type="text/javascript"> 
+	let nums = [4,2,9,1,8];
+	divideArray(nums);
+	function divideArray(arr){
+
+	let evenArray=[];
+	let oddArray=[];
+	let evenIndex=0,oddIndex=0;
+	for(i=0;i<arr.length;i++){
+
+	if(arr[i]%2==0){
+	evenArray[evenIndex]=arr[i];
+	evenIndex++;
+	}
+		else{
+		oddArray[oddIndex]=arr[i];
+		oddIndex++;
+		}
+	}
+	for(i=0;i<evenArray.length-1;i++)
+		for(j=0;j<evenArray.length-i-1;j++){
+
+		if(evenArray[j]>evenArray[j+1]){
+
+		temp=evenArray[j];
+		evenArray[j]=evenArray[j+1];
+		evenArray[j+1]=temp;
+		}
+	}
+
+	for(i=0;i<oddArray.length-1;i++)
+		for(j=0;j<oddArray.length-i-1;j++){
+			if(oddArray[j]>oddArray[j+1]){
+
+			temp=oddArray[j];
+			oddArray[j]=oddArray[j+1];
+			oddArray[j+1]=temp;
+			}
+		}	
+	console.log("Even numbers:")
+	document.write("Even numbers:")
+	if(evenArray.length<=0)
+	console.log("None");
+		else{
+			for(i=0;i<evenArray.length;i++){
+			console.log(evenArray[i]);
+			document.write(evenArray[i] + " ")
+			}
+		}
+	
+	console.log("Odd numbers:")
+	document.write("Odd numbers:")
+	if(oddArray.length<=0)
+	console.log("None");{
+		for(i=0;i<oddArray.length;i++){
+		console.log(oddArray[i]);
+		document.write(oddArray[i])
+		}
+	}
+}
+    </script> 
+</body> 
+  
+</html>

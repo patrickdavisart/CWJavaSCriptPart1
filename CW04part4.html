@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- question 4 -->
+<br>
+<html>
+<head><title>most frequent item of an array</title></head>
+<body>
+	<script type="text/javascript">
+	let arr2=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+	let mf = 1;
+	let m = 0;
+	let item;
+	for (let i=0; i<arr2.length; i++){
+        for (let j=i; j<arr2.length; j++){
+                if (arr2[i] == arr2[j])
+                 m++;
+                if (mf<m)
+                {
+                 mf=m; 
+                 item = arr2[i];
+                }
+        }
+        m=0;
+	}
+	document.write(item+" ( " +mf +" times ) ") ;
+	</script>
+	</body>
+</html>

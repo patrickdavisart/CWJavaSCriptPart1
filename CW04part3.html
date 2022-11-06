@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- question 3 -->
+<br>
+<html>
+<head><title>Sorting the array</title></head>
+<body>
+  <script type="text/javascript">
+    function bubbleSort(arr1){
+    var len = arr1.length;
+    var i, j;
+    var temp;
+
+    for (i=len-1; i >= 0; i--){
+        for (j=len-i; j >= 0; j--){
+            if (arr1[j] < arr1[j-1]){
+                temp = arr1[j- 1];
+                arr1[j - 1] = arr1[j];
+                arr1[j] = temp;
+            }
+        }
+    }
+
+    for(i = 0; i < len; i++)
+    {
+      document.write(arr1[i]+" ");
+    }
+}
+
+let arr1 = [3, 8, 7 , 6, 5, -4, -3, -2, 1];
+bubbleSort(arr1);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- question 5 -->
+<br>
+<br>
+<html>   
+<head> 
+    <title>Program to shuffle an array of 6 Integer values.</title> 
+</head> 
+ 
+<body> 
+    <p>Input array : [6, 7, 8, 9, 10, 11]</p> 
+      
+    <button onclick="display()"> 
+        click 
+    </button>   
+    <script type="text/javascript">   
+      
+        function shuffling(arr) { 
+            for (var m = arr.length - 1; m > 0; m--) {   
+                var n = Math.floor(Math.random() * (m + 1)); 
+                var temp = arr[m]; 
+                arr[m] = arr[n]; 
+                arr[n] = temp; 
+            }
+            return arr; 
+        } 
+        function display() { 
+            var arr = [6, 7, 8, 9, 10, 11] 
+            var finalarr = shuffling(arr) 
+            console.log("Final Array After Shuffling : ", finalarr)
+			document.write("Final Array After Shuffling : ", finalarr) 
+        } 
+    </script> 
+</body> 
+  
+</html>
+
